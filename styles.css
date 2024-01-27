@@ -1,0 +1,414 @@
+/* Styles for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #081c24;
+    color: #f0f8ff;
+    padding: 4em; /* Increase the padding to make the text box bigger */
+    position: absolute;
+    top: 0; /* Position the header at the top of the page */
+    left: 30%; /* Center the header horizontally */
+    transform: translateX(-50%); /* Center the header horizontally */
+}
+
+/* Styles for the main heading (name) */
+.header h1 {
+    font-size: 40px; /* Adjust the font size as needed */
+    margin-bottom: 0; /* Set margin-bottom to 0 to remove the gap below the name */
+}
+
+/* Styles for the subtitle (additional title) */
+.subtitle {
+    font-size: 20px; /* Adjust the font size for the subtitle */
+    color: #acacac; /* Set a color for the subtitle */
+    margin-top: 0; /* Remove any default margin from the top */
+}
+
+.position-description {
+    font-size: 17px; /* Adjust the font size for the position description */
+    color: #808080; /* Set a color for the position description */
+    margin-top: -15px; /* Remove any default margin from the top */
+}
+/* Styles for the whole page */
+body {
+    background-color: #081c24;
+    color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the welcome and bio container */
+.welcome-bio-container {
+    display: flex;
+    gap: 15em;
+    align-items: flex-start;
+    margin: 0;
+    position: relative; /* Set the container to relative position */
+}
+.bio-content {
+    box-sizing: border-box;
+    padding: 20px; /* Add padding inside the box */
+    border-radius: 5px; /* Add rounded corners to the box */
+    position: absolute;
+    left: 545px; /* Move the "About Me" section to the right */
+    top: -170px; /* Keep it at the same vertical position */
+    width: 150%; /* Adjust the width of the "About Me" section */
+    font-size: 18px
+}
+
+
+
+/* Styles for the container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0em;
+    box-sizing: border-box;
+}
+
+/* Styles for the "About Me" and "Projects" sections */
+.about {
+    background-color: transparent;
+    width: 100%; /* Set it back to 100% */
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+/* Beginning of Nav */
+
+/* Styles for the navbar */
+/* Styles for the navbar */
+.navbar {
+  position: fixed;
+  top: 30%;
+  left: 20%; /* Adjust the left value to position the navbar as desired */
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: -40px; /* Add negative margin to counteract the padding of the sections */
+}
+
+/* Styles for the navigation links */
+.navbar a {
+  color: #f0f8ff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  position: relative; /* Add relative positioning to the links */
+}
+
+/* Hover effect for the navigation links */
+.navbar a:hover {
+  color: #00b3ff; /* Change the link color to blue on hover */
+}
+
+/* Styles for the active link with the blue line */
+.navbar a.active {
+  color: #00b3ff;
+  position: relative; /* Add relative positioning to the active link */
+}
+
+/* Blue line styles */
+.navbar a.active:before {
+  content: "";
+  position: absolute;
+  top: 0; /* Set the top position to start from the top of the link */
+  left: -4px; /* Adjust the position of the line as needed */
+  width: 3px; /* Adjust the width of the line as needed */
+  height: 100%; /* Set the height to span the entire height of the link */
+  background-color: #00b3ff; /* Adjust the color of the line as needed */
+  z-index: -1; /* Add this line to place the line behind the text */
+}
+
+/* Animation for the blue line */
+.navbar a.active:before {
+transform: scaleX(1); /* Set the scaleX to 1 to show the line on active link */
+}
+/* Styles for the social media icons */
+.social-media {
+  position: fixed;
+  top: 70%;
+  left: 20%; /* Adjust the left value to position the social media icons as desired */
+  display: flex;
+  gap: 1em;
+  /* Remove the border-top */
+  border-top: none;
+}
+
+.social-media a {
+  text-decoration: none; /* Remove the underline from the social media icons */
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+/* Add a class to the body when a section is targeted */
+body.home #home:target .navbar a[href="#home"],
+body.experience #experience:target .navbar a[href="#experience"],
+body.job-details #job-details:target .navbar a[href="#job-details"],
+body.projects #projects:target .navbar a[href="#projects"] {
+    color: #00b3ff; /* Change the link color to blue when its section is targeted */
+}
+
+/* Move the blue line to the active link when its section is targeted */
+body.home #home:target .navbar a.active:before,
+body.experience #experience:target .navbar a.active:before,
+body.job-details #job-details:target .navbar a.active:before,
+body.projects #projects:target .navbar a.active:before {
+    left: -10px; /* Adjust the position of the line as needed */
+    opacity: 1; /* Show the line when its section is targeted */
+}
+/* End of Nav */
+
+/* Beginning of Sections */
+
+/* Styles for the sections */
+section {
+    padding: 2em; /* Add padding to create spacing between sections */
+    min-height: 100vh;
+}
+
+/* Style for home content */
+.home-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Styles for the "About Me" and "Projects" sections */
+.about,
+.projects {
+    background-color: transparent;
+    width: 80%; /* Adjust the width of the text box */
+    margin: 0 auto; /* Center the sections horizontally */
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+
+/* Style for text inside the "About Me" and "Projects" sections */
+.about p,
+.projects p {
+    color: #000000;
+}
+
+
+/* Styles for the "Projects" and "Experience" sections */
+.projects, .experience {
+    text-align: center;
+    max-width: 400px; /* Set the maximum width of the sections */
+    margin: 49em auto 0; /* Set top margin to 2em, auto for horizontal centering, and 0 for bottom margin */
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.projects {
+    float: left; /* Float the "Projects" section to the left */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* to order elements vertically */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0em;
+    box-sizing: border-box;
+}
+
+.about,
+.projects {
+    width: 80%; 
+    margin: 2em auto; /* Add vertical margin */
+    padding: 1em;
+    box-sizing: border-box;
+}
+/* CSS for the job timeline */
+.experience-section {
+  position: relative;
+  /* Move the timeline up */
+  top: -50px;
+  /* Move the timeline to the right */
+  left: 1000px;
+  margin-top: 50px; /* Adjust the top margin to move the section down */
+  /* Remove the left padding */
+  margin-right: 1200px;
+}
+/* Styles for the "Experience" heading */
+.experience-section h2 {
+  position: absolute;
+  top: -160px; /* Adjust the top position */
+  left: 0%; /* Adjust the left position */
+  text-align: left;
+  color: #237CA2;
+  font-size: 60px;
+}
+.timeline-entry h3 {
+  /* Your existing styles for the date heading */
+  position: relative;
+  font-size: 14px;
+  margin-bottom: -69px;
+  /* Move the date to the right */
+  left: -190px; /* Adjust the left position to bring the year out more */
+  padding-right: 10px; /* Add some padding to the right to separate it from the blue box */
+  display: flex;
+  color: #1A5C78;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: #237CA2;
+  font-size: 60px;
+  margin-top: 50px;
+}
+
+/* Styles for the line connecting job entries */
+.timeline-line {
+  content: "";
+  position: absolute;
+  top: 9%; /* Position the line vertically in the middle of the entry */
+  left: -50px; /* Adjust the left position of the line */
+  width: 2px; /* Adjust the width of the line */
+  height: calc(36% + 10px); /* Set the height to extend the line to the bottom of the entry */
+  background-color: #184253; /* Adjust the color of the line */
+  z-index: -1; /* Move the line behind the job information box */
+}
+
+
+.timeline-entry {
+  position: relative;
+  padding: 10px;
+  background-color: transparent; /* Set the background to transparent */
+  margin-bottom: 200px;
+}
+
+
+/* Date and job information container */
+.timeline-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Date heading */
+.timeline-content h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #1A5C78;
+  position: relative;
+}
+
+/* Line connecting to the next job */
+.timeline-content h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 100px;
+  height: 2px;
+  background-color: #184253;
+}
+
+/* Job information box */
+.job-info {
+  max-width: 550px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 5px;
+  color: #155069;
+  pointer-events: none;
+  display: block; /* Show the box by default */
+  border: 2px solid transparent; /* Set a transparent border by default */
+}
+
+/* Job title within the job information box */
+.job-info h4 {
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Styles for the clickable border on hover */
+.timeline-entry:hover .job-info {
+  /* Add a border and change its color on hover */
+  border: 2px solid #00b3ff; /* You can adjust the border width and color as needed */
+  /* Reset pointer events to auto on hover, making it clickable */
+  pointer-events: auto;
+}
+
+/* Styles for non-hovered job info boxes */
+.timeline-entry:not(:hover) .job-info {
+  /* Reset border to transparent for non-hovered boxes */
+  border-color: transparent;
+}
+/* Space out timeline entries */
+.timeline-entry:first-child .job-info {
+  max-width: 450px; /* Adjust the maximum width of the text box */
+}
+.timeline-entry:not(:first-child) .job-info {
+  max-width: 450px; /* Adjust the maximum width of the text box */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* CSS for the fade-out animation */
+.fade-out {
+    animation: fadeOut 1s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Add your existing CSS styles here */
+
+/* Styles for the cursor glow */
+.cursor-glow {
+    position: fixed;
+    width: 500px; /* Adjust the width to make the circle bigger */
+    height: 500px; /* Adjust the height to make the circle bigger */
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(9, 30, 39, 0.2) 0%, rgba(13, 44, 56, 0.1) 40%, rgba(13, 44, 56, 0) 70%);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 9999;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Styles for the flex container */
+.flex-container {
+  display: flex;
+}
+
+/* Styles for the "View my resume" link */
+.view-resume {
+  display: block; /* Set the link to a block-level element to make it move to the next line */
+  margin-top: -280px; /* Adjust the margin to move the link up by 20px */
+  margin-left: 1200px; /* Adjust the margin to move the link to the right by 20px */
+  text-decoration: none;
+}
+
+/* Optional: Styles for link color on hover */
+.view-resume:hover {
+  color: #00b3ff; /* Change the link color to blue on hover */
+}
